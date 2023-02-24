@@ -1,3 +1,4 @@
+
 #Librairies
 library(maps)
 library(leaflet)
@@ -16,7 +17,7 @@ leaflet(Data_entrants %>%
             Accord == Data_entrants$Accord
           )) %>%
   addTiles() %>%
-  addMarkers(lat = ~Latitude, lng=~Longitude) #à compléter
+  addMarkers(lat = ~Latitude, lng=~Longitude) #ï¿½ complï¿½ter
 
 ui <- fluidPage(
   leafletOutput("mymap")
@@ -27,7 +28,7 @@ ui <- fluidPage(
   titlePanel("My first shiny app"),
   leafletOutput("mymap"),
   fluidRow(column(2,radioButtons("radio", h3("Select the accord"),
-                                 choices = list("Bilateral" = "Bilatéral", "ERASMUS" = "ERASMUS", "MEXFITEC"="MEXFITEC", "BRAFITEC"="BRAFITEC", "BRAFAGRI"="BRAFAGRI","ARFITEC"="ARFITEC"),
+                                 choices = list("Bilateral" = "Bilatï¿½ral", "ERASMUS" = "ERASMUS", "MEXFITEC"="MEXFITEC", "BRAFITEC"="BRAFITEC", "BRAFAGRI"="BRAFAGRI","ARFITEC"="ARFITEC"),
   ))))
 
 server <- function(input, output, session) {
